@@ -8,6 +8,16 @@ function showmenu() {
   }
 }
 
+function profileDropDown() {
+  var x = document.getElementById("profileUL");
+
+  if (x.style.display == "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 changeIcon();
 {
   y.classList.toggle("fa-solid fa-xmark");
