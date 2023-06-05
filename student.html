@@ -17,68 +17,117 @@
       href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
     />
     <link rel="stylesheet" href="css/teacher.css" />
-    <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="css/student.css" />
     <title>Student</title>
   </head>
-  <body>
+  <body class="body-color">
     <div class="container">
-      
-        <div class="row">
-            <div class="col-12">
-              <div class="header">
-                <div class="navbar">
-                  <div class="logo">
-                    <a href="index.html">Megamind</a>
-                  </div>
-                  <ul class="links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                  </ul>
-                  <div class="profile-icon-width">
-                    <a onclick="profileDropDown();" href="#"
-                      ><i class="fa-solid fa-user-tie"></i>
-                      <p>Profile</p>
-                    </a>
-                  </div>
-    
-                  <button class="dropdown_button">
-                    <i
-                      onclick="showmenu(); changeIcon();"
-                      class="fa-solid fa-bars"
-                    ></i>
-                  </button>
-                </div>
-                <div class="dropdownMenu" id="myUL">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li>
-                    <a class="profile-icon" onclick="profileDropDown();" href="#">
-                      <p>Profile</p>
-                    </a>
-                  </li>
-                </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="header">
+            <div class="navbar">
+              <div class="logo">
+                <a href="index.html">Megamind</a>
               </div>
+              <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <div class="profile-icon-width">
+                <a onclick="profileDropDown();" href="#"
+                  ><i class="fa-solid fa-user-tie"></i>
+                  <p>Profile</p>
+                </a>
+              </div>
+
+              <button class="dropdown_button">
+                <i
+                  onclick="showmenu(); changeIcon();"
+                  class="fa-solid fa-bars"
+                ></i>
+              </button>
+            </div>
+            <div class="dropdownMenu" id="myUL">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+              <li>
+                <a class="profile-icon" onclick="profileDropDown();" href="#">
+                  <p>Profile</p>
+                </a>
+              </li>
             </div>
           </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="profile-drop">
-                <div class="profiledropdownMenu" id="profileUL">
-                  <li><a href="#">My Profile</a></li>
-                  <li><a href="#">Notification</a></li>
-                  <li><a href="#">Settings</a></li>
-                  <li><a href="#">Log Out</a></li>
-                </div>
-              </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="profile-drop">
+            <div class="profiledropdownMenu" id="profileUL">
+              <li><a href="#">My Profile</a></li>
+              <li><a href="#">Notification</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Log Out</a></li>
             </div>
           </div>
-          <!-- navgigation bar close-->
+        </div>
+      </div>
+      <!-- navgigation bar close-->
 
       <div class="row">
         <div class="col-12">
-          
+          <div class="row">
+            <div class="padding-first-row">
+              <div class="col-6">
+                <div class="search-chart-container">
+                  <div class="search-chart-box px-5">
+                    <div class="input-group">
+                        <div class="id-semester-display">
+                            <input
+                            type="number"
+                            class="form-control searchbox"
+                            placeholder="Enter ID"
+                            style="width: 50%; border-radius: 5px 5px 5px 5px"
+                          />
+    
+                          <select
+                            class="form-select dropdown-btn-student"
+                            aria-label="Default select example"
+                          >
+                            <option selected>Semester</option>
+                            <option value="Summer 2023">Summer 2023</option>
+                            <option value="Spring 2023">Spring 2023</option>
+                            <option value="Fall 2022">Fall 2022</option>
+                            <option value="Summer 2022">Summer 2022</option>
+                            <option value="Spring 2022">Spring 2022</option>
+                          </select>
+                        </div>
+                      
+                      <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="search-chart-container">
+                  <div class="search-chart-box"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="barchart-container">
+                <div class="barchart-box"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- footer -->
