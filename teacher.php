@@ -1,5 +1,8 @@
 <html lang="en">
+<?php
+include_once("login.php");
 
+?>
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,7 +25,7 @@
         <div class="header">
           <div class="navbar">
             <div class="logo">
-              <a href="index.html">Megamind</a>
+              <a href="index.php">Megamind</a>
             </div>
             <ul class="links">
               <li><a href="#">Home</a></li>
@@ -31,7 +34,7 @@
             </ul>
             <div class="profile-icon-width">
               <a onclick="profileDropDown();" href="#"><i class="fa-solid fa-user-tie"></i>
-                <p>Profile</p>
+              <p><?php echo $_SESSION['Name'] ?></p>
               </a>
             </div>
             
@@ -44,7 +47,7 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
             <li><a class="profile-icon" onclick="profileDropDown();" href="#">
-              <p>Profile</p>
+              <p><?php echo $_SESSION['Name'] ?></p>
             </a></li>
           </div>
         </div>
@@ -57,7 +60,7 @@
             <li><a href="#">My Profile</a></li>
             <li><a href="#">Notification</a></li>
             <li><a href="#">Settings</a></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="logout.php">Log Out</a></li>
           </div>
         </div>
       </div>

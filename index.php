@@ -18,7 +18,7 @@
         <div class="header">
           <div class="navbar">
             <div class="logo">
-              <a href="index.html">Megamind</a>
+              <a href="index.php">Megamind</a>
             </div>
             <ul class="links">
               <li><a href="#">Home</a></li>
@@ -84,7 +84,7 @@
                   <h4>Teachers Login</h4>
                 </div>
                 <div class="d-flex flex-column text-center">
-                  <form action="action.php" method="POST">
+                  <form action="login.php" method="POST">
                     <div class="form-group">
                       <h6 class="form-text-label">Email Address</h6>
                       <input type="email" name="email" class="form-control" id="email" placeholder="Enter email address...">
@@ -93,7 +93,7 @@
                       <h6 class="form-text-label">Password</h6>
                       <input type="password" name="password" class="form-control" id="password" placeholder="Enter password...">
                     </div>
-                    <button type="button" class="login_btn" id="tsignin">Login</button>
+                    <button type="submit" class="login_btn" id="tsignin" name="tsignin">Login</button>
                   </form>
 
                 </div>
@@ -123,7 +123,7 @@
                   <h4>Students Login</h4>
                 </div>
                 <div class="d-flex flex-column text-center">
-                  <form action="action.php" method="POST">
+                  <form action="login.php" method="POST">
                     <div class="form-group">
                       <h6 class="form-text-label">Email Address</h6>
                       <input type="email" name="email" class="form-control" id="email" placeholder="Enter email address...">
@@ -132,7 +132,7 @@
                       <h6 class="form-text-label">Password</h6>
                       <input type="password" name="password" class="form-control" id="password" placeholder="Enter password...">
                     </div>
-                    <button type="button" class="login_btn" id="ssignin" >Login</button>
+                    <button type="button" class="login_btn" id="ssignin" name="ssignin" >Login</button>
                   </form>
 
                 </div>
@@ -255,7 +255,7 @@
                       <input type="password" name="password" class="form-control" id="password" placeholder="Enter password...">
                     </div>
 
-                    <button type="button" class="login_btn" id="ssignup">Sign Up</button>
+                    <button type="submit" class="login_btn" id="ssignup" name="ssignup">Sign Up</button>
                   </form>
 
                 </div>
