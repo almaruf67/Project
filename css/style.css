@@ -6,7 +6,10 @@
 
 body {
   height: 100vh;
-  background-color: #fff;
+}
+
+.body-color {
+  background-color: #f8f9fc;
 }
 
 li {

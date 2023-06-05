@@ -1,3 +1,8 @@
+.background-image {
+  position: sticky;
+  background-size: contain;
+}
+
 .navbar a {
   text-decoration: none;
   display: flex;
@@ -55,9 +60,9 @@
   text-align: center;
 }
 
-.profiledropdownMenu li:hover{
-    background-color: #212529;
-  }
+.profiledropdownMenu li:hover {
+  background-color: #212529;
+}
 .profiledropdownMenu li a {
   width: 100%;
   text-decoration: none;
@@ -71,62 +76,41 @@
 .semester {
   height: 700px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
-.selection-teacher-mode{
+.selection-teacher-mode {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 500px;
+  min-height: 300px;
   max-width: 800px;
   flex: 0 auto;
   align-self: auto;
   align-items: center;
   display: flex;
   overflow: visible;
-  color: rgb(255, 255, 255);
-  background-color: #fff;
+  /* color: rgb(255, 255, 255);
+  background-color: #fff; */
   border-radius: 5px;
-  margin-bottom: 100px;
-  margin-top: 100px;
   padding: 10px 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
 }
 
 .select-sem-sec {
-  min-height: 500px;
+  height: 500px;
   width: 800px;
   flex: 0 auto;
-  justify-content: space-around;
+  gap: 50px;
   align-self: auto;
   align-items: center;
   display: flex;
   position: static;
   overflow: visible;
-}
-
-.dropdown {
-  position: relative;
-  display: flex;
-  justify-content: start;
-  top: -4em;
-}
-
-.dropdown-section {
-  position: relative;
-  display: flex;
-  justify-content: start;
-  top: -4em;
-}
-
-.dropdown-course {
-  position: relative;
-  display: flex;
-  justify-content: start;
-  top: -4em;
+  margin-top: -2rem;
+  margin-left: 50px;
 }
 
 .dropdown-btn {
@@ -142,8 +126,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 25px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   font-weight: 630;
+  transition: all 0.8s;
+}
+.dropdown-btn:active {
+  box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-btn-course {
@@ -161,6 +149,11 @@
   padding: 10px 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-weight: 630;
+  transition: all 0.8s;
+}
+
+.dropdown-btn-course:active {
+  box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-btn-section {
@@ -178,108 +171,23 @@
   padding: 10px 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-weight: 630;
+  transition: all 0.8s;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #3f474f;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  width: 350px;
-  top: 2.6em;
-  border-radius: 5px;
-  list-style: none;
-  padding-left: 0em;
+.dropdown-btn-section:active {
+  box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown-content-course {
-  display: none;
-  position: absolute;
-  background-color: #3f474f;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  width: 350px;
-  top: 2.6em;
-  border-radius: 5px;
-  list-style: none;
-  padding-left: 0em;
-}
-
-.dropdown-content-section {
-  display: none;
-  position: absolute;
-  background-color: #3f474f;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  width: 250px;
-  top: 2.6em;
-  border-radius: 5px;
-  padding-left: 0em;
-}
-
-.dropdown-content li {
-  color: #ffffff;
-  padding: 12px 25px;
-  list-style-type: none;
-  list-style: none;
-  cursor: pointer;
+.teacher-title {
+  height: 40px;
   width: 100%;
+  margin-left: 30px;
 }
 
-.dropdown-content-course li {
-  color: #ffffff;
-  padding: 12px 25px;
-  list-style-type: none;
-  list-style: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-.dropdown-content-section li {
-  color: #ffffff;
-  padding: 12px 25px;
-  list-style-type: none;
-  cursor: pointer;
-}
-
-.dropdown-content li:hover {
-  background-color: #f1f1f1;
-  color: #102c44;
-}
-
-.dropdown-content-course li:hover {
-  background-color: #f1f1f1;
-  color: #102c44;
-}
-
-.dropdown-content-section li:hover {
-  background-color: #f1f1f1;
-  color: #102c44;
-}
-
-.caret {
-  margin-left: 4px;
-  border-top: 4px solid #ffffff;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  position: absolute;
-  right: 1.8em;
-  top: 1.2em;
-}
-
-.teacher-title{
-  height: 100px;
-  width: 100%;
-}
-
-.teacher-title p{
+.teacher-title p {
   color: #212529;
   font-size: 20px;
-  margin: 5px 20px;
+  font-weight: 600;
 }
 
 @media (max-width: 992px) {
@@ -294,13 +202,62 @@
     width: 100%;
     z-index: 1;
   }
-  .selection-teacher-mode{
+  .selection-teacher-mode {
     max-width: 600px;
+  }
+
+  .teacher-input-next-button {
+    width: 100%;
+    margin-right: 0px;
   }
 }
 
 @media (max-width: 556px) {
-  .selection-teacher-mode{
+  .selection-teacher-mode {
     max-width: 400px;
   }
+}
+
+@media (min-width: 992px) {
+  .selection-teacher-mode {
+    height: 200px;
+  }
+
+  .background-image {
+    position: absolute;
+    right: 280px;
+    z-index: -1;
+    bottom: 220px;
+  }
+  .background-image img {
+    height: 600px;
+  }
+
+  .teacher-input-next-button {
+    margin-right: -500px;
+  }
+}
+
+.teacher-input-next-button {
+  display: flex;
+  width: 82%;
+  justify-content: end;
+  padding: 10px 5px;
+  text-decoration: none;
+  margin-right: 110px;
+  border-radius: 3px;
+}
+
+.teacher-input-next-button:hover {
+  background-color: #212529;
+}
+
+.teacher-input-next-button i {
+  text-decoration: none;
+  color: #102c44;
+  font-size: 22px;
+}
+
+.teacher-input-next-button:hover i {
+  color: #ffffff;
 }
