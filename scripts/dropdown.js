@@ -17,6 +17,12 @@ function toggleDropdownSection() {
     dropdownContent.style.display === "block" ? "none" : "block";
 }
 
+function toggleDropdownCourse() {
+  var dropdownContent = document.getElementById("dropdownContentCourse");
+  dropdownContent.style.display =
+    dropdownContent.style.display === "block" ? "none" : "block";
+}
+
 function selectItemSec(item) {
   var dropdownBtn = document.querySelector(".dropdown-btn-section");
   dropdownBtn.textContent = item.textContent;

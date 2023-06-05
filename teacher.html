@@ -65,36 +65,55 @@
     <!-- navgigation bar close-->
 
     <!-- Dropdown for selection-->
+    
     <div class="row">
       <div class="col-12">
         <div class="semester">
-          <div class="select-sem-sec">
-            <div class="dropdown">
-              <button class="dropdown-btn" onclick="toggleDropdown()">
-                Semester
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-content" id="dropdownContent">
-                <li onclick="selectItem(this)">Summer 2023</li>
-                <li onclick="selectItem(this)">Spring 2023</li>
-                <li onclick="selectItem(this)">Fall 2022</li>
-                <li onclick="selectItem(this)">Summer 2022</li>
-                <li onclick="selectItem(this)">Spring 2022</li>
-              </ul>
+          <div class="selection-teacher-mode">
+            <div class="teacher-title">
+              <p>Input Result</p>
             </div>
-
-            <div class="dropdown-section">
-              <button class="dropdown-btn-section" onclick="toggleDropdownSection()">
-                Section
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-content-section" id="dropdownContentSection">
-                <li onclick="selectItemSec(this)">A-55</li>
-                <li onclick="selectItemSec(this)">B-55</li>
-                <li onclick="selectItemSec(this)">C-55</li>
-                <li onclick="selectItemSec(this)">D-55</li>
-                <li onclick="selectItemSec(this)">E-55</li>
-              </ul>
+            <div class="select-sem-sec">
+              <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                  Semester
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-content" id="dropdownContent">
+                  <li onclick="selectItem(this)">Summer 2023</li>
+                  <li onclick="selectItem(this)">Spring 2023</li>
+                  <li onclick="selectItem(this)">Fall 2022</li>
+                  <li onclick="selectItem(this)">Summer 2022</li>
+                  <li onclick="selectItem(this)">Spring 2022</li>
+                </ul>
+              </div>
+  
+              <div class="dropdown-section">
+                <button class="dropdown-btn-section" onclick="toggleDropdownSection()">
+                  Section
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-content-section" id="dropdownContentSection">
+                  <li onclick="selectItemSec(this)">A-55</li>
+                  <li onclick="selectItemSec(this)">B-55</li>
+                  <li onclick="selectItemSec(this)">C-55</li>
+                  <li onclick="selectItemSec(this)">D-55</li>
+                  <li onclick="selectItemSec(this)">E-55</li>
+                </ul>
+              </div>
+              <div class="dropdown-course">
+                <button class="dropdown-btn-course" onclick="toggleDropdownCourse()">
+                  Course
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-content-course" id="dropdownContentCourse">
+                  <li onclick="selectItemCourse(this)">CSE 422</li>
+                  <li onclick="selectItemCourse(this)">CSE 421</li>
+                  <li onclick="selectItemCourse(this)">CSE 411</li>
+                  <li onclick="selectItemCourse(this)">CSE 415</li>
+                  <li onclick="selectItemCourse(this)">CSE 414</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
