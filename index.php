@@ -132,7 +132,7 @@
                       <h6 class="form-text-label">Password</h6>
                       <input type="password" name="password" class="form-control" id="password" placeholder="Enter password...">
                     </div>
-                    <button type="button" class="login_btn" id="ssignin" name="ssignin" >Login</button>
+                    <button type="button" class="login_btn" id="ssignin" name="ssignin">Login</button>
                   </form>
 
                 </div>
@@ -238,13 +238,24 @@
                 </div>
                 <div class="d-flex flex-column text-center">
                   <form action="action.php" method="POST">
-                  <div class="form-group">
+                    <div class="form-group">
                       <h6 class="form-text-label">Student ID</h6>
                       <input type="text" name="id" class="form-control" id="id" placeholder="Enter ID...">
                     </div>
                     <div class="form-group">
                       <h6 class="form-text-label">Full Name</h6>
                       <input type="text" name="name" class="form-control" id="name" placeholder="Enter Name...">
+                    </div>
+                    <div class="form-group">
+                    <h6 class="form-text-label">Semester</h6>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>------</option>
+                        <option value="Summer 2023">Summer 2023</option>
+                        <option value="Spring 2023">Spring 2023</option>
+                        <option value="Fall 2022">Fall 2022</option>
+                        <option value="Summer 2022">Summer 2022</option>
+                        <option value="Spring 2022">Spring 2022</option>
+                      </select>
                     </div>
                     <div class="form-group">
                       <h6 class="form-text-label">Email Address</h6>
@@ -331,7 +342,7 @@
     </div>
 
     <script src="scripts\script.js"></script>
-   
+
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>

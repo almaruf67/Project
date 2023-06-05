@@ -73,17 +73,24 @@ include_once("login.php");
         <div class="semester">
           <div class="select-sem-sec">
             <div class="dropdown">
-              <button class="dropdown-btn" onclick="toggleDropdown()">
+              <!-- <button class="dropdown-btn" onclick="toggleDropdown()">
                 Semester
                 <span class="caret"></span>
-              </button>
-              <ul class="dropdown-content" id="dropdownContent">
+              </button> -->
+              <!-- <ul class="dropdown-content" id="dropdownContent">
                 <li onclick="selectItem(this)">Summer 2023</li>
                 <li onclick="selectItem(this)">Spring 2023</li>
                 <li onclick="selectItem(this)">Fall 2022</li>
                 <li onclick="selectItem(this)">Summer 2022</li>
                 <li onclick="selectItem(this)">Spring 2022</li>
-              </ul>
+              </ul> -->
+              <select class="form-select dropdown-btn" aria-label="Default select example">
+                        <option value="Summer 2023">Summer 2023</option>
+                        <option value="Spring 2023">Spring 2023</option>
+                        <option value="Fall 2022">Fall 2022</option>
+                        <option value="Summer 2022">Summer 2022</option>
+                        <option value="Spring 2022">Spring 2022</option>
+                      </select>
             </div>
 
             <div class="dropdown-section">
