@@ -248,13 +248,23 @@
                     </div>
                     <div class="form-group">
                     <h6 class="form-text-label">Semester</h6>
-                      <select class="form-select" aria-label="Default select example">
+                      <select name="semester" id="semester" class="form-select" aria-label="Default select example">
                         <option selected>------</option>
                         <option value="Summer 2023">Summer 2023</option>
                         <option value="Spring 2023">Spring 2023</option>
                         <option value="Fall 2022">Fall 2022</option>
                         <option value="Summer 2022">Summer 2022</option>
                         <option value="Spring 2022">Spring 2022</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                    <h6 class="form-text-label">Section</h6>
+                      <select name="section" id="section" class="form-select" aria-label="Default select example">
+                        <option selected>------</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
                       </select>
                     </div>
                     <div class="form-group">

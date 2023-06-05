@@ -22,7 +22,9 @@ else if(isset($_POST['ssignup'])){
       $name=$_POST["name"];
       $email=$_POST["email"];
       $pass=$_POST["password"];
-      $query ="INSERT INTO student(ID,Name,Email,Password) VALUES('$id','$name','$email','$pass')";     
+      $semester=$_POST["semester"];
+      $section=$_POST["section"];
+      $query ="INSERT INTO student(ID,Name,Email,Password,Semester,Section) VALUES('$id','$name','$email','$pass','$semester','$section')";     
       if ($mysqli->query($query) === TRUE) {
             echo "Records updated: ";
       } else {
