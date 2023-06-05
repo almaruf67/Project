@@ -189,7 +189,7 @@
                   <h4>Teachers Sign Up</h4>
                 </div>
                 <div class="d-flex flex-column text-center">
-                  <form action="action.php" method="POST">
+                  <form action="signup.php" method="POST">
                     <div class="form-group">
                       <h6 class="form-text-label">Teachers ID</h6>
                       <input type="text" name="id" class="form-control" id="id" placeholder="Enter ID...">
@@ -237,7 +237,7 @@
                   <h4>Students Sign Up</h4>
                 </div>
                 <div class="d-flex flex-column text-center">
-                  <form action="action.php" method="POST">
+                  <form action="signup.php" method="POST">
                     <div class="form-group">
                       <h6 class="form-text-label">Student ID</h6>
                       <input type="text" name="id" class="form-control" id="id" placeholder="Enter ID...">
