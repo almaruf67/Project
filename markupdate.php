@@ -26,4 +26,18 @@ if (isset($_POST['feed'])) {
       }
       
 }
+
+if (isset($_POST['recheck'])) {
+      $id = $_POST['sid'];
+      $course = $_POST['c_id'];
+      $subject = $_POST['subject'];
+      $des = $_POST['des'];
+      $db = "INSERT INTO `t_noti`(`Course_Title`, `S_ID`, `Subject`, `Description`) VALUES ('$course','$id','$subject','$des')";
+      if ($mysqli->query($db) === TRUE) {
+            header("location:student.php");
+      } else {
+            echo "Error: ".mysqli_error($mysqli);
+      }
+      
+}
 ?>

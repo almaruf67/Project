@@ -30,7 +30,7 @@ else if(isset($_POST['ssignup'])){
       } else {
             echo "Error: ";
       }
-     // header("location:index.php");
+header("location:index.php");
 }
 
 

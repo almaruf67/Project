@@ -16,6 +16,7 @@ if (isset($_POST['tsignin'])) {
         $_SESSION['Email'] = $email;
         $_SESSION['Name'] = $row['Name'];
         $_SESSION['ID'] = $row['ID'];
+        $_SESSION['user'] = 'teacher';
 
       //   echo "session successfull for ".$_SESSION['Name'];
         header("Location: teacher.php");
@@ -27,7 +28,7 @@ if (isset($_POST['tsignin'])) {
 if (isset($_POST['ssignin'])) {
       $email = $_POST['email'];
       $password = $_POST['password'];
-  
+
       $query = "SELECT * FROM student WHERE Email='$email' and Password='$password'";
   
       $result = mysqli_query($mysqli, $query);
@@ -39,6 +40,7 @@ if (isset($_POST['ssignin'])) {
           $_SESSION['Email'] = $email;
           $_SESSION['Name'] = $row['Name'];
           $_SESSION['ID'] = $row['ID'];
+          $_SESSION['user'] = 'student';
   
         //   echo "session successfull for ".$_SESSION['Name'];
           header("Location: student.php");
