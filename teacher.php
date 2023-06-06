@@ -1,9 +1,5 @@
 <?php
 
-
-require("config.php");
-
-$result = mysqli_query($mysqli,"SELECT * FROM student");
 include_once("header.php");
 ?>
 <!-- Dropdown for selection-->
