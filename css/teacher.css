@@ -93,7 +93,7 @@
 }
 
 .select-sem-sec {
-  height: 500px;
+  height: 600px;
   width: 800px;
   flex: 0 auto;
   gap: 30px;
@@ -206,7 +206,7 @@
     max-width: 400px;
   }
   .teacher-input-next-button {
-    margin-top: 0px;
+    width: 50%;
   }
 }
 
