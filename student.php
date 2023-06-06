@@ -61,8 +61,9 @@ include_once("header.php");
     <div class="row">
       <div class="col-12">
         <div class="barchart-container">
+          <?php include("chart.php");?>
           <div class="barchart-box">
-
+          <div id="top_x_div" style="height: 300px; padding:30px;" class="col-12"></div>
           </div>
         </div>
       </div>

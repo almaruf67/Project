@@ -1,5 +1,4 @@
 <?php
-session_start();
 $sid = $_SESSION['ID'];
 require("config.php");
 ?>
@@ -65,10 +64,3 @@ require("config.php");
     chart.draw(data, options);
   };
 </script>
-</head>
-
-<body>
-  <div id="top_x_div" style="width: 900px; height: 500px;"></div>
-</body>
-
-</html>
