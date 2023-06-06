@@ -2,6 +2,8 @@
 <?php
 session_start();
 
+$self_path = $_SERVER['PHP_SELF'];
+
 ?>
 <head>
   <meta charset="UTF-8" />
@@ -15,7 +17,17 @@ session_start();
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
   <link rel="stylesheet" href="css/teacher.css">
   <link rel="stylesheet" href="css/student.css" />
-  <title>Teacher</title>
+  <title><?php
+      if($self_path=="/Project/teacherentry.php")
+       echo "Information";
+      else if($self_path=="/Project/index.php")
+       echo "Home";
+      else if($self_path=="/Project/teacher.php")
+       echo "Teacher";
+      else if($self_path=="/Project/student.php")
+       echo "Student";
+
+?></title>
 </head>
 
 <body>
