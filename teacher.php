@@ -43,12 +43,13 @@ include_once("header.php");
               <option value="CSE 414">CSE 414</option>
             </select>
           </div>
-        </form>
+        
           <div class="col-9">
             <div class="teacher-next">
               <button class="teacher-input-next-button" type="submit" name="entry"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
           </div>
+          </form>
       </div>
     </div>
 
