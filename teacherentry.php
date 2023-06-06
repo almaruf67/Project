@@ -56,13 +56,13 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
                                                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditModal<?php echo $sid ?>">
                                                             Update
                                                       </button>
-                                                      <form >
-                                                                  <input type="hidden" name="id" value="<?php echo $sid; ?>">
-                                                                  <button class="btn btn-danger" type="submit" name="fupdate">
-                                                                        Feedback
-                                                                  </button>
-                                                            </form>
-                                                            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddModal<?php echo $sid ?>">
+                                                      <form>
+                                                            <input type="hidden" name="id" value="<?php echo $sid; ?>">
+                                                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#EditModal<?php echo $sid ?>">
+                                                                  <i style="font-size: 20px; margin-top: -5px; color:#212529;" class="fa-solid fa-pen-to-square"></i>
+                                                            </button>
+                                                      </form>
+                                                      <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddModal<?php echo $sid ?>">
                                                                   Add
                                                             </button> -->
                                                 </div>
