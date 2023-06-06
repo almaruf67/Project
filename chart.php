@@ -1,32 +1,11 @@
 <?php
 session_start();
 $sid = $_SESSION['ID'];
-// $_SESSION['ID']."<br>" ."   ". $_SESSION['Name']."   ".  $_SESSION['Email']."<br>";
 require("config.php");
-// $value = mysqli_query($mysqli, "SELECT * FROM result WHERE S_ID='$sid'");
-//             while ($item = $value->fetch_assoc()) {
-//               $sum=$item['Quiz']+$item['Mid']+$item['Final']; 
-//               echo $sum;
-//             }
-// $sum=0; 
-//          while($row=mysql_fetch_array($result)){
-
-//                  $id = $row['id'];
-//                  $score = $row['score'];
-
-//                      if ($score == "1"){
-
-//                          $sum = $sum+$score;
-
-//                      }
-
-//          }
-// echo $sum;
 ?>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script type="text/javascript">
-  // Load the Google Charts library
   google.charts.load('current', {
     'packages': ['bar']
   });
@@ -34,7 +13,7 @@ require("config.php");
 
   function drawChart() {
     var data = new google.visualization.arrayToDataTable([
-      ['Course Title', 'Total Marks'],
+      ['Course Title', 'GPA'],
       <?php
       $value = mysqli_query($mysqli, "SELECT * FROM result WHERE S_ID='$sid'");
       while ($item = $value->fetch_assoc()) {
@@ -69,7 +48,7 @@ require("config.php");
     var options = {
       
       chart: {
-        title: 'Number in Exam'
+        title: 'Student All Courses Result'
       },
       //  subtitle: 'popularity by percentage' },
       bars: 'vartical', // Required for Material Bar Charts.
