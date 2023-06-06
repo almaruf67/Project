@@ -123,6 +123,7 @@ $self_path = $_SERVER['PHP_SELF'];
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <?php 
+            
               if($_SESSION['Name']=='teacher')
               {
                 $tid=$_SESSION['ID'];
