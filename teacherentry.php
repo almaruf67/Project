@@ -67,7 +67,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
                                                             </button> -->
                                                 </div>
 
-                                                <!-- Modal Update-->
+                                                 <!-- Modal Update-->
                                                 <div class="modal fade" id="EditModal<?php echo $sid ?>" tabindex="-1" aria-labelledby="EditModal" aria-hidden="true">
                                                       <div class="modal-dialog">
                                                             <div class="modal-content">
