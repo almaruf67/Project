@@ -7,7 +7,7 @@ if (isset($_POST['update'])) {
       $final = $_POST['Final'];
       $db = "UPDATE result SET Quiz='$quiz',Mid='$mid',Final=$final WHERE S_ID='$id'";
       if ($mysqli->query($db) === TRUE) {
-            header("location:teacher.php");
+            header("location:teacherentry.php");
       } else {
             echo "Error: ";
       }

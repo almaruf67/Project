@@ -44,7 +44,7 @@ include_once("header.php");
           </select>
         </div>
         <button class="teacher-input-next-button" type="submit" name="entry"><i class="fa-solid fa-arrow-right"></i></button>
-        </a>
+        
         </form>
       </div>
     </div>
