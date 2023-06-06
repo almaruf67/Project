@@ -103,26 +103,30 @@ include_once("header.php");
         </div>
       </div>
     </div>
-
-    <!-- search result display -->
+    
+    <!-- pie chart and gpa  -->
     <div class="row">
-      <div class="col-12">
-        <div class="search-result-display">
-          <div class="search-result-container">
-            <div class="search-result-box">
-
+            <div class="padding-first-row">
+              <div class="col-6">
+                <div class="search-chart-container">
+                  <div class="search-chart-box px-5">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="search-chart-container">
+                  <div class="search-chart-box"></div>
+                </div>
+              </div>
             </div>
           </div>
-
-        </div>
-      </div>
-    </div>
 
     <!-- bar chart -->
     <div class="row">
       <div class="col-12">
         <div class="barchart-container">
-          <?php include("chart.php"); ?>
+          <?php include("barchart.php"); ?>
           <div class="barchart-box">
             <div id="top_x_div" style="height: 300px; padding:30px;" class="col-12"></div>
           </div>

@@ -37,7 +37,7 @@ require("config.php");
         else
           $val = 0.00;
         $course = $item['Course_Title'];
-      ?>['<?php echo $course; ?>', <?php echo $val; ?>],
+      ?>['<?php echo $course; ?>', <?php echo $val; ?> ],
       <?php
       }
       ?>
@@ -47,7 +47,7 @@ require("config.php");
     var options = {
       
       chart: {
-        title: 'Student All Courses Result'
+        title: 'Spring 2023'
       },
       //  subtitle: 'popularity by percentage' },
       bars: 'vartical', // Required for Material Bar Charts.
@@ -57,7 +57,9 @@ require("config.php");
       },
       bar: {
         groupWidth: "90%"
-      }
+      },
+      colors: ['#6b60d1']
+      
     };
 
     var chart = new google.charts.Bar(document.getElementById('top_x_div'));

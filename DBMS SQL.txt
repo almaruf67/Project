@@ -10,5 +10,3 @@ Q3 INT NULL,
 FOREIGN KEY (S_ID) REFERENCES student(ID)
 );
 
-//addsum trigger
-CREATE TRIGGER `addsum` AFTER UPDATE ON `result` FOR EACH ROW UPDATE result SET Sum = Quiz + Mid + Final WHERE Id = NEW.Id;
