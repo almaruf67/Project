@@ -148,9 +148,6 @@ include_once("header.php");
                   <thead>
                     <tr>
                       <th scope="col">Course_Title</th>
-                      <th scope="col">Quiz</th>
-                      <th scope="col">Mid</th>
-                      <th scope="col">Final</th>
                       <th scope="col">GPA</th>
                       <th scope="col">Feedback</th>
                     </tr>
@@ -182,9 +179,6 @@ include_once("header.php");
                   ?>
                     <tr>
                       <td><?php echo $item['Course_Title'] ?></td>
-                      <td><?php echo $item['Quiz'] ?></td>
-                      <td><?php echo $item['Mid'] ?></td>
-                      <td><?php echo $item['Final'] ?></td>
                       <td><?php echo $val ?></td>
                       <td><?php echo $item['Feedback'] ?></td>
                     </tr>
