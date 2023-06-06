@@ -54,23 +54,22 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
                                                 <div style="display:flex; flex-direction:row;">
                                                       <!-- Button trigger modal -->
                                                       <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#EditModal<?php echo $sid ?>">
-                                                                  <i style="font-size: 20px; margin-top: -5px; color:#212529;" class="fa-solid fa-pen-to-square"></i>
-                                                            </button>
-                                                      <form>
-                                                            <input type="hidden" name="id" value="<?php echo $sid; ?>">
-                                                            
-                                                      </form>
+                                                            <i style="font-size: 20px; margin-top: -5px; color:#212529;" class="fa-solid fa-pen-to-square"></i>
+                                                      </button>
+                                                      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#EditModal<?php echo $sid ?>">
+                                                            <i class="fa-regular fa-message"  style="font-size: 20px; margin-top: -5px; color: #212529;"></i>
+                                                      </button>
                                                       <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddModal<?php echo $sid ?>">
                                                                   Add
                                                             </button> -->
                                                 </div>
 
-                                                 <!-- Modal Update-->
+                                                <!-- Modal Update-->
                                                 <div class="modal fade" id="EditModal<?php echo $sid ?>" tabindex="-1" aria-labelledby="EditModal" aria-hidden="true">
                                                       <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                   <div class="modal-header">
-                                                                        <h1 class="modal-title fs-5" id="EditModal">Upadte Information for <?php echo $sid ?></h1>
+                                                                        <h1 class="modal-title fs-5" id="EditModal">Update Information for <?php echo $sid ?></h1>
                                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                   </div>
                                                                   <form method="POST" action="markupdate.php">

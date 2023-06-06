@@ -51,6 +51,18 @@ include_once("header.php");
             </div>
           </div>
 
+          <!-- search result display -->
+          <div class="row">
+            <div class="col-12">
+              <div class="search-result-container">
+                <div class="search-result-box">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- bar chart -->
           <div class="row">
             <div class="col-12">
               <div class="barchart-container">
