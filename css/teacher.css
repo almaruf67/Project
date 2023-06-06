@@ -199,15 +199,14 @@
     max-width: 600px;
   }
 
-  .teacher-input-next-button {
-    width: 100%;
-    margin-right: 0px;
-  }
 }
 
 @media (max-width: 556px) {
   .selection-teacher-mode {
     max-width: 400px;
+  }
+  .teacher-input-next-button {
+    margin-top: 0px;
   }
 }
 
@@ -226,9 +225,6 @@
     height: 550px;
   }
 
-  .teacher-input-next-button {
-    margin-right: -200px;
-  }
 }
 
 .teacher-input-next-button {
