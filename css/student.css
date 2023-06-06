@@ -28,6 +28,10 @@
   transition: all 0.8s;
 }
 
+.search-result-display {
+  display: none;
+}
+
 .search-result-container{
   margin-top: 20px;
   height: 300px;
