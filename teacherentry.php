@@ -52,7 +52,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
                                                 <div style="display:flex; flex-direction:row;">
                                                       <!-- Button trigger modal -->
                                                       <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#EditModal<?php echo $sid ?>">
-                                                            <i style="font-size: 20px; margin-top: -5px;" class="fa-solid fa-pen-to-square"></i>
+                                                            <i style="font-size: 20px; margin-top: -5px; color:#212529;" class="fa-solid fa-pen-to-square"></i>
                                                       </button>
                                                       <!-- <form >
                                                                   <input type="hidden" name="id" value="<?php echo $sid; ?>">
