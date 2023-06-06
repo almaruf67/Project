@@ -52,7 +52,7 @@ if (isset($_POST['teacher'])) {
                                                       <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                   <div class="modal-header">
-                                                                        <h1 class="modal-title fs-5" id="EditModal">Upadte Information for <?php echo $key['ID'] ?></h1>
+                                                                        <h1 class="modal-title fs-5" id="EditModal">Update Information for <?php echo $key['ID'] ?></h1>
                                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                   </div>
                                                                   <form method="POST" action="action.php">
@@ -207,7 +207,7 @@ else if (isset($_POST['student'])) {
                                                       <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                   <div class="modal-header">
-                                                                        <h1 class="modal-title fs-5" id="EditModal">Upadte Information for <?php echo $key['ID'] ?></h1>
+                                                                        <h1 class="modal-title fs-5" id="EditModal">Update Information for <?php echo $key['ID'] ?></h1>
                                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                   </div>
                                                                   <form method="POST" action="action.php">
@@ -410,7 +410,7 @@ else if (isset($_POST['result'])) {
                                                       <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                   <div class="modal-header">
-                                                                        <h1 class="modal-title fs-5" id="EditModal">Upadte Information for <?php echo $key['Id'] ?></h1>
+                                                                        <h1 class="modal-title fs-5" id="EditModal">Update Information for <?php echo $key['Id'] ?></h1>
                                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                   </div>
                                                                   <form method="POST" action="action.php">

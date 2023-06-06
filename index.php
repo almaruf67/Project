@@ -132,7 +132,7 @@
                       <h6 class="form-text-label">Password</h6>
                       <input type="password" name="password" class="form-control" id="password" placeholder="Enter password...">
                     </div>
-                    <button type="button" class="login_btn" id="ssignin" name="ssignin">Login</button>
+                    <button type="submit" class="login_btn" id="ssignin" name="ssignin">Login</button>
                   </form>
 
                 </div>

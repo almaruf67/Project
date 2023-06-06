@@ -41,7 +41,7 @@ if (isset($_POST['ssignin'])) {
           $_SESSION['ID'] = $row['ID'];
   
         //   echo "session successfull for ".$_SESSION['Name'];
-          //header("Location: teacher.php");
+          header("Location: student.php");
       } else {
           echo "error";
       }

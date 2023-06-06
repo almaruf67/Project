@@ -50,7 +50,7 @@ if (isset($_POST['entry'])) {
                                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditModal<?php echo $sid ?>">
                                                                   Update
                                                             </button>
-                                                            <form method="GET" action="delete.php">
+                                                            <form >
                                                                   <input type="hidden" name="id" value="<?php echo $sid; ?>">
                                                                   <button class="btn btn-danger" type="submit">
                                                                         Delete
@@ -117,10 +117,7 @@ if (isset($_POST['entry'])) {
                                                                   </div>
                                                             </div>
                                                       </div>
-
-
-
-                                                </td>
+                                               </td>
                                           </tr>
                               <?php
                                     }
