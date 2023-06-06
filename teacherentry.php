@@ -56,7 +56,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
                                                       <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#EditModal<?php echo $sid ?>">
                                                             <i style="font-size: 20px; margin-top: -5px; color:#212529;" class="fa-solid fa-pen-to-square"></i>
                                                       </button>
-                                                      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#EditModal<?php echo $sid ?>">
+                                                      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#FeedModal<?php echo $sid ?>">
                                                             <i class="fa-regular fa-message"  style="font-size: 20px; margin-top: -5px; color: #212529;"></i>
                                                       </button>
                                                       <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddModal<?php echo $sid ?>">
@@ -122,11 +122,11 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
                                                 </div>
 
                                                 <!-- Modal Feedback-->
-                                                <div class="modal fade" id="EditModal<?php echo $sid ?>" tabindex="-1" aria-labelledby="EditModal" aria-hidden="true">
+                                                <div class="modal fade" id="FeedModal<?php echo $sid ?>" tabindex="-1" aria-labelledby="FeedModal" aria-hidden="true">
                                                       <div class="modal-dialog">
                                                             <div class="modal-content">
                                                                   <div class="modal-header">
-                                                                        <h1 class="modal-title fs-5" id="EditModal">Upadte Information for <?php echo $sid ?></h1>
+                                                                        <h1 class="modal-title fs-5" id="FeedModal">Give a Feedback for <?php echo $sid ?></h1>
                                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                   </div>
                                                                   <form method="POST" action="markupdate.php">
@@ -134,43 +134,18 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
 
 
                                                                               <input type="hidden" value="<?php echo $sid ?>" name="sid">
+                                                                              <input type="hidden" value="<?php echo $course ?>" name="c_id">
 
+                                                                              
                                                                               <div class="mb-3">
-                                                                                    <label for="Name<?php echo $sid ?>" class="form-label">Name</label>
-                                                                                    <input type="text" name="Name" class="form-control" id="Name<?php echo $sid ?>" value="<?php echo $key['Name'] ?>" disabled>
-                                                                              </div>
-
-                                                                              <div class="mb-3">
-                                                                                    <label for="Semester<?php echo $sid ?>" class="form-label">Semester</label>
-                                                                                    <input type="text" name="Semester" class="form-control" id="Semester<?php echo $sid ?>" value="<?php echo $key['Semester'] ?>" disabled>
-                                                                              </div>
-
-                                                                              <div class="mb-3">
-                                                                                    <label for="Section<?php echo $sid ?>" class="form-label">Section</label>
-                                                                                    <input type="text" name="Section" class="form-control" id="Section<?php echo $sid ?>" value="<?php echo $key['Section'] ?>" disabled>
-                                                                              </div>
-
-                                                                              <div class="mb-3">
-                                                                                    <label for="Course<?php echo $sid ?>" class="form-label">Course_Title</label>
-                                                                                    <input type="text" name="Course" class="form-control" id="Course<?php echo $sid ?>" value="<?php echo $item['Course_Title'] ?>" disabled>
-                                                                              </div>
-
-                                                                              <div class="mb-3">
-                                                                                    <label for="Quiz<?php echo $sid ?>" class="form-label">Quiz</label>
-                                                                                    <input type="number" name="Quiz" class="form-control" id="Quiz<?php echo $sid ?>" value="<?php echo $item['Quiz'] ?>">
-                                                                              </div>
-                                                                              <div class="mb-3">
-                                                                                    <label for="Mid<?php echo $sid ?>" class="form-label">Mid</label>
-                                                                                    <input type="number" name="Mid" class="form-control" id="Mid<?php echo $sid ?>" value="<?php echo $item['Mid'] ?>">
-                                                                              </div>
-                                                                              <div class="mb-3">
-                                                                                    <label for="Final<?php echo $sid ?>" class="form-label">Final</label>
-                                                                                    <input type="number" name="Final" class="form-control" id="Final<?php echo $sid ?>" value="<?php echo $item['Final'] ?>">
+                                                                                    <label for="feed<?php echo $sid ?>" class="form-label">Feedback</label>
+                                                                                    <textarea name="feedback" id="feed<?php echo $sid ?>" class="form-control" cols="20" rows="5"><?php echo $item['Feedback'] ?></textarea>
+                                                                                    
                                                                               </div>
                                                                         </div>
                                                                         <div class="modal-footer">
                                                                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                                              <button type="submit" class="btn btn-primary" name="update">Save changes</button>
+                                                                              <button type="submit" class="btn btn-primary" name="feed">Save changes</button>
                                                                         </div>
                                                                   </form>
 

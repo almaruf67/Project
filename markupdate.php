@@ -13,4 +13,17 @@ if (isset($_POST['update'])) {
       }
       
 }
+
+if (isset($_POST['feed'])) {
+      $id = $_POST['sid'];
+      $feedback = $_POST['feedback'];
+      $course = $_POST['c_id'];
+      $db = "UPDATE result SET Feedback='$feedback' WHERE S_ID='$id' AND Course_Title='$course'";
+      if ($mysqli->query($db) === TRUE) {
+            header("location:teacherentry.php");
+      } else {
+            echo "Error: ";
+      }
+      
+}
 ?>
