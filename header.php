@@ -18,13 +18,13 @@ $self_path = $_SERVER['PHP_SELF'];
   <link rel="stylesheet" href="css/teacher.css">
   <link rel="stylesheet" href="css/student.css" />
   <title><?php
-      if($self_path=="/Project/teacherentry.php")
+      if($self_path=="/project/teacherentry.php")
        echo "Information";
-      else if($self_path=="/Project/index.php")
+      else if($self_path=="/project/index.php")
        echo "Home";
-      else if($self_path=="/Project/teacher.php")
+      else if($self_path=="/project/teacher.php")
        echo "Teacher";
-      else if($self_path=="/Project/student.php")
+      else if($self_path=="/project/student.php")
        echo "Student";
 
 ?></title>
