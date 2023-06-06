@@ -5,7 +5,7 @@ if(isset($_POST['tsignup']))
 {
 $id=$_POST["id"];
 $name=$_POST["name"];
-$email=$_POST["name"];
+$email=$_POST["email"];
 $pass=$_POST["password"];
 $query ="INSERT INTO teacher(ID,Name,Email,Password) VALUES('$id','$name','$email','$pass')";     
 if ($mysqli->query($query) === TRUE) {
