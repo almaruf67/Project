@@ -30,8 +30,7 @@ $self_path = $_SERVER['PHP_SELF'];
 ?></title>
 </head>
 
-<body>
-
+<body class="body-color">
   <div class="container">
     <!-- navgigation bar -->
     <div class="row">

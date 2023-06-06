@@ -29,7 +29,7 @@
 }
 
 .search-result-display {
-  display: none;
+  display: block;
 }
 
 .search-result-container{
