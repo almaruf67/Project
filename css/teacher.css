@@ -98,13 +98,13 @@
   height: 500px;
   width: 800px;
   flex: 0 auto;
-  gap: 50px;
+  gap: 30px;
   align-self: auto;
   align-items: center;
   display: flex;
   position: static;
   overflow: visible;
-  margin-top: -2rem;
+  margin-top: -8rem;
   margin-left: 50px;
 }
 
@@ -220,26 +220,25 @@
 
   .background-image {
     position: absolute;
-    right: 280px;
+    right: 100px;
     z-index: -1;
-    bottom: 220px;
+
   }
   .background-image img {
-    height: 600px;
+    height: 550px;
   }
 
   .teacher-input-next-button {
-    margin-right: -500px;
+    margin-right: -200px;
   }
 }
 
 .teacher-input-next-button {
   display: flex;
-  width: 82%;
+  width: 70%;
   justify-content: end;
   padding: 10px 5px;
   text-decoration: none;
-  margin-right: 110px;
   border-radius: 3px;
 }
 
