@@ -84,8 +84,6 @@
   max-width: 800px;
   flex: 0 auto;
   align-self: auto;
-  align-items: center;
-  display: flex;
   overflow: visible;
   /* color: rgb(255, 255, 255);
   background-color: #fff; */
@@ -235,11 +233,13 @@
 
 .teacher-input-next-button {
   display: flex;
-  width: 70%;
+  width: 100%;
   justify-content: end;
   padding: 10px 5px;
   text-decoration: none;
   border-radius: 3px;
+  margin-left: -80px;
+  margin-top: -100px;
 }
 
 .teacher-input-next-button:hover {
@@ -254,4 +254,7 @@
 
 .teacher-input-next-button:hover i {
   color: #ffffff;
+}
+.teacher-next{
+  width: 100%;
 }
