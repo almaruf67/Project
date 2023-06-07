@@ -123,7 +123,7 @@ $self_path = $_SERVER['PHP_SELF'];
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="notiModal"><?php echo $_SESSION['Name'] ?></h1>
+            <h1 class="modal-title fs-5" id="notiModal">Notification</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <?php
@@ -133,18 +133,44 @@ $self_path = $_SERVER['PHP_SELF'];
             require("config.php");
             $query = "SELECT * FROM `t_noti` ";
             $result = mysqli_query($mysqli, $query);
+            ?>
+            <table border="1" class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Course Title</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+            <?php
             while ($row = $result->fetch_assoc()) {
-              echo $row['S_ID']."   ". $row['Course_Title']."   ". $row['Subject']."   ". $row['Description']."<br>";
-              }
-          }
           ?>
-          <div class="modal-body">
+              
+                  <tr>
+                    <td><?php echo $row['S_ID'] ?></td>
+                    <td><?php echo $row['Course_Title'] ?></td>
+                    <td><?php echo $row['Subject'] ?></td>
+                    <td><?php echo $row['Description'] ?></td>
 
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </tr>
+              <?php
 
-          </div>
+            }
+            ?>
+            </tbody>
+            </table>
+            <?php
+          }
+              ?>
+              <div class="modal-body">
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+              </div>
 
 
         </div>
