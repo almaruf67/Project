@@ -98,10 +98,27 @@ $self_path = $_SERVER['PHP_SELF'];
           if ($user == 'teacher') {
             $tid = $_SESSION['ID'];
             require("config.php");
-            $query = "SELECT * FROM teacher WHERE id='$tid'";
+            $query = "SELECT * FROM teacher WHERE ID='$tid'";
             $result = mysqli_query($mysqli, $query);
             $row = $result->fetch_assoc();
-            echo $row['ID'] . "   " . $row['Name'] . "   " . $row['Email'] . "   " . "<br>";
+            ?>
+            <table border="1" class="table">
+                    <tr>
+                    <th scope="col">Name</th>
+                    <td scope="col"><?php echo $row['Name']?></td>
+                    </tr>
+                    <tr>
+                    <th scope="col">ID</th>
+                    <td scope="col"><?php echo $row['ID']?></td>
+                    </tr>
+                    <tr>
+                    <th scope="col">Email</th>
+                    <td scope="col"><?php echo $row['Email']?></td>
+                    </tr>
+                
+            </table>
+            <?php
+
           }
           else if ($user == 'student') {
             $tid = $_SESSION['ID'];
@@ -109,9 +126,26 @@ $self_path = $_SERVER['PHP_SELF'];
             $query = "SELECT * FROM student WHERE id='$tid'";
             $result = mysqli_query($mysqli, $query);
             $row = $result->fetch_assoc();
-            echo $row['ID'] . "   " . $row['Name'] . "   " . $row['Email'] . "   " . "<br>";
+            ?>
+            <table border="1" class="table">
+                    <tr>
+                    <th scope="col">Name</th>
+                    <td scope="col"><?php echo $row['Name']?></td>
+                    </tr>
+                    <tr>
+                    <th scope="col">ID</th>
+                    <td scope="col"><?php echo $row['ID']?></td>
+                    </tr>
+                    <tr>
+                    <th scope="col">Email</th>
+                    <td scope="col"><?php echo $row['Email']?></td>
+                    </tr>
+                
+            </table>
+            <?php
           }
           ?>
+
 
           <div class="modal-body">
 
