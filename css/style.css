@@ -114,6 +114,8 @@ li {
   background-color: rgb(33, 37, 41);
 }
 
+
+
 @media (max-width: 992px) {
   .navbar .links,
   .navbar .signupBtn {
