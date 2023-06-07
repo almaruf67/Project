@@ -12,3 +12,13 @@ FOREIGN KEY (S_ID) REFERENCES student(ID)
 
 
 CREATE TABLE t_noti ( Id INT PRIMARY KEY AUTO_INCREMENT, Course_Title VARCHAR(10) NOT NULL, S_ID INT , Subject VARCHAR(20) NULL, Description VARCHAR(200) NULL, FOREIGN KEY (S_ID) REFERENCES student(ID) );
+
+
+//manual insertion (student sign up)
+INSERT INTO `student`(`ID`, `Name`, `Email`, `Password`, `Semester`, `Section`) VALUES ('121','Siam','s@gmail.com','12345','Spring 2023','D')
+
+//manual insertion (teacher sign up)
+
+
+//manual result entry
+INSERT INTO `result`(`Id`, `Course_Title`, `S_ID`, `Quiz`, `Mid`, `Final`, `Feedback`) VALUES ('121','CSE 422','121','15','24','30','Good'), ('121','CSE 421','121','12','20','27','nah'), ('121','CSE 415','121','15','24','30','Good'), ('121','CSE 414','121','10','18','35','Good'), ('121','CSE 411','121','5','24','31','Good'),('122','CSE 422','122','15','24','30','Good'), ('122','CSE 421','122','12','20','27','nah'), ('122','CSE 415','122','15','24','30','Good'), ('122','CSE 414','122','10','18','35','Good'), ('122','CSE 411','122','5','24','31','Good'),('123','CSE 422','123','15','24','30','Good'), ('123','CSE 421','123','12','20','27','nah'), ('123','CSE 415','123','15','24','30','Good'), ('123','CSE 414','123','10','18','35','Good'), ('123','CSE 411','123','5','24','31','Good'),('124','CSE 422','124','15','24','30','Good'), ('124','CSE 421','124','12','20','27','nah'), ('124','CSE 415','124','15','24','30','Good'), ('124','CSE 414','124','10','18','35','Good'), ('124','CSE 411','124','5','24','31','Good')
