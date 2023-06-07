@@ -110,13 +110,77 @@ include_once("header.php");
         <div class="col-6">
           <div class="gpa-container">
             <div class="gpa-box">
-
+              <?php include("piechart.php"); ?>
+              <div id="piechart" style="width: auto; height: 100%;" class="pt-5 px-5"></div>
             </div>
           </div>
         </div>
         <div class="col-6">
           <div class="gpa-container">
-            <div class="gpa-box"></div>
+            <div class="gpa-box px-5">
+              <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Marks(%)</th>
+                    <th scope="col">Grade</th>
+                    <th scope="col">Grade Point</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">80-100</th>
+                    <td>A+</td>
+                    <td>4.00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">75-79</th>
+                    <td>A</td>
+                    <td>3.75</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">70-74</th>
+                    <td>A-</td>
+                    <td>3.50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">65-69</th>
+                    <td>B+</td>
+                    <td>3.25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">60-64</th>
+                    <td>B</td>
+                    <td>3.00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">55-59</th>
+                    <td>B-</td>
+                    <td>2.75</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">50-54</th>
+                    <td>C+</td>
+                    <td>2.50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">45-49</th>
+                    <td>C</td>
+                    <td>2.25</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">40-44</th>
+                    <td>D</td>
+                    <td>2.00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">00-39</th>
+                    <td>F</td>
+                    <td>0.00</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>

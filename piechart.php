@@ -1,32 +1,57 @@
-<html>
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+<?php
+$sid = $_SESSION['ID'];
+require("config.php");
+?>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {
+    'packages': ['corechart']
+  });
+  google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
+  function drawChart() {
+    var data = new google.visualization.arrayToDataTable([
+      ['Course Title', 'GPA'],
+      <?php
+      $value = mysqli_query($mysqli, "SELECT * FROM result WHERE S_ID='$sid'");
+      while ($item = $value->fetch_assoc()) {
+        $sum = $item['Quiz'] + $item['Mid'] + $item['Final'];
+        $val;
+        if ($sum > 79)
+          $val = 4.00;
+        else if ($sum > 74)
+          $val = 3.75;
+        else if ($sum > 69)
+          $val = 3.50;
+        else if ($sum > 64)
+          $val = 3.25;
+        else if ($sum > 59)
+          $val = 3.00;
+        else if ($sum > 54)
+          $val = 2.75;
+        else if ($sum > 49)
+          $val = 2.50;
+        else if ($sum > 44)
+          $val = 2.00;
+        else
+          $val = 0.00;
+        $course = $item['Course_Title'];
+      ?>['<?php echo $course; ?>', <?php echo $val; ?>],
+      <?php
       }
-    </script>
-  </head>
-  <body>
-    <div id="piechart" style="width: 900px; height: 500px;"></div>
-  </body>
-</html>
+      ?>
+
+    ]);
+
+    var options = {
+      title: 'Spring 2023',
+      chart: {
+      },
+      colors: ['#6b60d1']
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+  }
+</script>
