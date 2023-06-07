@@ -22,6 +22,7 @@ if (isset($_POST['tsignin'])) {
         header("Location: teacher.php");
     } else {
         echo "error";
+        header("location:index.php");
     }
 }
 
@@ -46,6 +47,7 @@ if (isset($_POST['ssignin'])) {
           header("Location: student.php");
       } else {
           echo "error";
+          header("location:index.php");
       }
   }
 ?>
