@@ -103,6 +103,14 @@ $self_path = $_SERVER['PHP_SELF'];
             $row = $result->fetch_assoc();
             echo $row['ID'] . "   " . $row['Name'] . "   " . $row['Email'] . "   " . "<br>";
           }
+          else if ($user == 'student') {
+            $tid = $_SESSION['ID'];
+            require("config.php");
+            $query = "SELECT * FROM student WHERE id='$tid'";
+            $result = mysqli_query($mysqli, $query);
+            $row = $result->fetch_assoc();
+            echo $row['ID'] . "   " . $row['Name'] . "   " . $row['Email'] . "   " . "<br>";
+          }
           ?>
 
           <div class="modal-body">
