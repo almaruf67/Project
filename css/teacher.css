@@ -229,12 +229,11 @@
 
 .teacher-input-next-button {
   display: flex;
-  width: 100%;
+  width: 50%;
   justify-content: end;
   padding: 10px 5px;
   text-decoration: none;
   border-radius: 3px;
-  margin-left: -80px;
   margin-top: -100px;
 }
 
@@ -253,4 +252,7 @@
 }
 .teacher-next{
   width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
