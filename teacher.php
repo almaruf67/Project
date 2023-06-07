@@ -45,7 +45,7 @@ include_once("header.php");
           </div>
         
           <div class="col-9">
-            <div class="teacher-next">
+            <div style="margin-left: 0px;" class="teacher-next">
               <button class="teacher-input-next-button" type="submit" name="entry"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
           </div>
