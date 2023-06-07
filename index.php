@@ -37,7 +37,7 @@ session_destroy();?>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
             <li>
-              <a class="signupBtn" href="#" style="color: aliceblue">Sign Up</a>
+              <a class="signupBtn" data-toggle="modal" data-target="#SelectModal" href="#" style="color: aliceblue">Sign Up</a>
             </li>
           </div>
         </div>
