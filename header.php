@@ -3,6 +3,10 @@
 session_start();
 
 $self_path = $_SERVER['PHP_SELF'];
+if($self_path==('/project/about.php' || '/project/contact.php' || '/project/index.php'))
+$user='No user';
+else
+$user=$_SESSION['user'];
 
 ?>
 
@@ -52,7 +56,7 @@ $self_path = $_SERVER['PHP_SELF'];
             </ul>
             <div class="profile-icon-width">
               <a onclick="profileDropDown();" href="#"><i class="fa-solid fa-user-tie"></i>
-                <p><?php echo $_SESSION['Name'] ?></p>
+                <p><?php echo $user ?></p>
               </a>
             </div>
 
@@ -65,7 +69,7 @@ $self_path = $_SERVER['PHP_SELF'];
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact</a></li>
             <li><a class="profile-icon" onclick="profileDropDown();" href="#">
-                <p><?php echo $_SESSION['Name'] ?></p>
+                <p><?php echo $user ?></p>
               </a></li>
           </div>
         </div>
@@ -90,7 +94,7 @@ $self_path = $_SERVER['PHP_SELF'];
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="proModal"><?php echo $_SESSION['Name'] ?></h1>
+            <h1 class="modal-title fs-5" id="proModal"><?php echo $user?></h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <?php
