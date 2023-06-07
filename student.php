@@ -108,15 +108,15 @@ include_once("header.php");
     <div class="row">
       <div class="padding-first-row">
         <div class="col-6">
-          <div class="search-chart-container">
-            <div class="search-chart-box px-5">
+          <div class="gpa-container">
+            <div class="gpa-box">
 
             </div>
           </div>
         </div>
         <div class="col-6">
-          <div class="search-chart-container">
-            <div class="search-chart-box"></div>
+          <div class="gpa-container">
+            <div class="gpa-box"></div>
           </div>
         </div>
       </div>
