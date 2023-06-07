@@ -114,6 +114,46 @@ li {
   background-color: rgb(33, 37, 41);
 }
 
+
+.profile-drop {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  z-index: 1;
+}
+.profiledropdownMenu {
+  position: absolute;
+  display: none;
+  background: #3f474f;
+  width: 30%;
+  height: 220px;
+  padding-top: 14px;
+}
+
+.profiledropdownMenu li {
+  width: 100%;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profiledropdownMenu li:hover {
+  background-color: #212529;
+}
+.profiledropdownMenu li a {
+  width: 100%;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+}
+.profiledropdownMenu li a:hover {
+  color: orange;
+}
+
+
 @media (max-width: 992px) {
   .navbar .links,
   .navbar .signupBtn {
