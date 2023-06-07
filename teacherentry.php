@@ -77,6 +77,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
 
 
                                                                               <input type="hidden" value="<?php echo $sid ?>" name="sid">
+                                                                              <input type="hidden" value="<?php echo $item['Course_Title'] ?>" name="Course">
 
                                                                               <div class="mb-3">
                                                                                     <label for="Name<?php echo $sid ?>" class="form-label">Name</label>
@@ -91,11 +92,6 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
                                                                               <div class="mb-3">
                                                                                     <label for="Section<?php echo $sid ?>" class="form-label">Section</label>
                                                                                     <input type="text" name="Section" class="form-control" id="Section<?php echo $sid ?>" value="<?php echo $key['Section'] ?>" disabled>
-                                                                              </div>
-
-                                                                              <div class="mb-3">
-                                                                                    <label for="Course<?php echo $sid ?>" class="form-label">Course_Title</label>
-                                                                                    <input type="text" name="Course" class="form-control" id="Course<?php echo $sid ?>" value="<?php echo $item['Course_Title'] ?>" disabled>
                                                                               </div>
 
                                                                               <div class="mb-3">
@@ -162,6 +158,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
             </table>
       </div>
 </div>
+<div class="col-12 d-flex justify-content-end mb-2">
+<a href="teacher.php"><button class="btn btn-primary">Done</button></a></div>
 
 <?php
 include_once("footer.php");

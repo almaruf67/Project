@@ -3,9 +3,10 @@ require("config.php");
 if (isset($_POST['update'])) {
       $id = $_POST['sid'];
       $quiz = $_POST['Quiz'];
+      $course= $_POST['Course'];
       $mid = $_POST['Mid'];
       $final = $_POST['Final'];
-      $db = "UPDATE result SET Quiz='$quiz',Mid='$mid',Final=$final WHERE S_ID='$id'";
+      $db = "UPDATE result SET Quiz='$quiz',Mid='$mid',Final=$final WHERE S_ID='$id' AND Course_Title=$course";
       if ($mysqli->query($db) === TRUE) {
             header("location:teacherentry.php");
       } else {

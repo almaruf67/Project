@@ -10,17 +10,10 @@ $self_path = $_SERVER['PHP_SELF'];
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" 
-    rel="stylesheet">
-    <link 
-    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Yeseva+One&display=swap" rel="stylesheet"> 
-    <link 
-    href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" 
-    rel="stylesheet"> 
-    <link 
-     href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&display=swap" 
-     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,8 +30,8 @@ $self_path = $_SERVER['PHP_SELF'];
             echo "Teacher";
           else if ($self_path == "/project/student.php")
             echo "Student";
-      else if($self_path=="/project/about.php")
-      echo "About Us";
+          else if ($self_path == "/project/about.php")
+            echo "About Us";
           ?></title>
 </head>
 
@@ -100,6 +93,17 @@ $self_path = $_SERVER['PHP_SELF'];
             <h1 class="modal-title fs-5" id="proModal"><?php echo $_SESSION['Name'] ?></h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
+          <?php
+          $user = $_SESSION['user'];
+          if ($user == 'teacher') {
+            $tid = $_SESSION['ID'];
+            require("config.php");
+            $query = "SELECT * FROM teacher WHERE id='$tid'";
+            $result = mysqli_query($mysqli, $query);
+            $row = $result->fetch_assoc();
+            echo $row['ID'] . "   " . $row['Name'] . "   " . $row['Email'] . "   " . "<br>";
+          }
+          ?>
 
           <div class="modal-body">
 
@@ -122,18 +126,17 @@ $self_path = $_SERVER['PHP_SELF'];
             <h1 class="modal-title fs-5" id="notiModal"><?php echo $_SESSION['Name'] ?></h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <?php 
-            
-              if($_SESSION['Name']=='teacher')
-              {
-                $tid=$_SESSION['ID'];
-                $sql="SELECT * FROM teacher WHERE id='$tid'";
-                if ($mysqli->query($query) === TRUE) {
-                  echo $row['ID']."   ". $row['Name']."   ". $row['Email']."   "."<br>";
-                } else {
-                  echo "Error: ";
-            }
+          <?php
+          $user = $_SESSION['user'];
+          if ($user == 'teacher') {
+            $tid = $_SESSION['ID'];
+            require("config.php");
+            $query = "SELECT * FROM `t_noti` ";
+            $result = mysqli_query($mysqli, $query);
+            while ($row = $result->fetch_assoc()) {
+              echo $row['S_ID']."   ". $row['Course_Title']."   ". $row['Subject']."   ". $row['Description']."<br>";
               }
+          }
           ?>
           <div class="modal-body">
 
