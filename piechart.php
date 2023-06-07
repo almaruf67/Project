@@ -47,7 +47,7 @@ require("config.php");
       title: 'Spring 2023',
       chart: {
       },
-      colors: ['#6b60d1']
+      colors: ['#6b60d1','#5347c9','#3e31b0','#2c228c','#2f1fc4','#4e3bff']
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
