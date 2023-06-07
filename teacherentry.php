@@ -77,7 +77,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM student WHERE Semester='$semester
 
 
                                                                               <input type="hidden" value="<?php echo $sid ?>" name="sid">
-                                                                              <input type="hidden" value="<?php echo $item['Course_Title'] ?>" name="Course">
+                                                                              <input type="hidden" value="<?php echo $course ?>" name="c_id">
 
                                                                               <div class="mb-3">
                                                                                     <label for="Name<?php echo $sid ?>" class="form-label">Name</label>
